@@ -29,7 +29,7 @@ jobs:
         uses: messense/maturin-action@v1
         with:
           target: x86_64
-          args: --release --out dist
+          args: --release --out --sdist dist
       - name: Build wheels - universal2
         uses: messense/maturin-action@v1
         with:
@@ -79,7 +79,7 @@ jobs:
     - name: Make wheel
       run: |
         sudo docker build -t flatterer-anylinux .
-        sudo docker run  -v $(pwd):/io flatterer-anylinux build --release --out /tmp/dist 
+        sudo docker run  -v $(pwd):/io flatterer-anylinux build --no-sdist --release --out /tmp/dist 
     - name: Upload wheels
       uses: actions/upload-artifact@v2
       with:
