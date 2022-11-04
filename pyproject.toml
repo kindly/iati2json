@@ -1,6 +1,6 @@
 [project]
 name="iati2json"
-description = "Opinionated JSON to CSV converter"
+description = "Iati to JSON converter"
 readme="README.md"
 repository="https://github.com/kindly/iati2json"
 license = {text= "MIT"}
