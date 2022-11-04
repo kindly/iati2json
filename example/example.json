@@ -1,0 +1,781 @@
+{
+  "iati-activities": {
+    "generated-datetime": "2014-09-10T07:15:37Z",
+    "linked-data-default": "http://data.example.org/",
+    "version": 2.02,
+    "iati-activity": [
+      {
+        "default-currency": "USD",
+        "hierarchy": 1,
+        "humanitarian": 1,
+        "last-updated-datetime": "2014-09-10T07:15:37Z",
+        "linked-data-uri": "http://data.example.org/123456789",
+        "xml:lang": "en",
+        "iati-identifier": "AA-AAA-123456789-ABC123",
+        "reporting-org": {
+          "ref": "AA-AAA-123456789",
+          "secondary-reporter": 0,
+          "type": 40,
+          "narrative": [
+            "Organisation name",
+            {
+              "xml:lang": "fr",
+              "#text": "Nom de l'organisme"
+            }
+          ]
+        },
+        "title": {
+          "narrative": [
+            "Activity title",
+            {
+              "xml:lang": "fr",
+              "#text": "Titre de l'activité"
+            },
+            {
+              "xml:lang": "es",
+              "#text": "Título de la actividad"
+            }
+          ]
+        },
+        "description": [
+          {
+            "type": 1,
+            "narrative": [
+              "General activity description text.  Long description of the activity with no particular structure.",
+              {
+                "xml:lang": "fr",
+                "#text": "Activité générale du texte de description. Longue description de l'activité sans structure particulière."
+              }
+            ]
+          },
+          {
+            "type": 2,
+            "narrative": [
+              "Objectives for the activity, for example from a logical framework.",
+              {
+                "xml:lang": "fr",
+                "#text": "Objectifs de l'activité, par exemple à partir d'un cadre logique."
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "narrative": [
+              "Statement of groups targeted to benefit from the activity.",
+              {
+                "xml:lang": "fr",
+                "#text": "Déclaration de groupes ciblés pour bénéficier de l'activité."
+              }
+            ]
+          }
+        ],
+        "participating-org": [
+          {
+            "activity-id": "BB-BBB-123456789-1234",
+            "ref": "BB-BBB-123456789",
+            "role": 1,
+            "type": 40,
+            "narrative": [
+              "Name of Agency B"
+            ]
+          },
+          {
+            "activity-id": "CC-CCC-123456789-1234",
+            "ref": "CC-CCC-123456789",
+            "role": 2,
+            "type": 10,
+            "narrative": [
+              "Name of Agency C"
+            ]
+          },
+          {
+            "activity-id": "AA-AAA-123456789-1234",
+            "ref": "AA-AAA-123456789",
+            "role": 3,
+            "type": 21,
+            "narrative": [
+              "Name of Agency A",
+              {
+                "xml:lang": "fr",
+                "#text": "Nom de l'agence A"
+              }
+            ]
+          }
+        ],
+        "other-identifier": [
+          {
+            "ref": "ABC123-XYZ",
+            "type": "A1",
+            "owner-org": {
+              "ref": "AA-AAA-123456789",
+              "narrative": [
+                "Organisation name"
+              ]
+            }
+          }
+        ],
+        "activity-status": {
+          "code": 2
+        },
+        "activity-date": [
+          {
+            "iso-date": "2012-04-15",
+            "type": 1,
+            "narrative": [
+              "Planned start date of the activity",
+              {
+                "xml:lang": "fr",
+                "#text": "Date prévue de début de l'activité"
+              }
+            ]
+          },
+          {
+            "iso-date": "2012-04-28",
+            "type": 2
+          },
+          {
+            "iso-date": "2015-12-31",
+            "type": 3
+          }
+        ],
+        "contact-info": [
+          {
+            "type": 1,
+            "organisation": {
+              "narrative": [
+                "Agency A"
+              ]
+            },
+            "department": {
+              "narrative": [
+                "Department B"
+              ]
+            },
+            "person-name": {
+              "narrative": [
+                "A. Example"
+              ]
+            },
+            "job-title": {
+              "narrative": [
+                "Transparency Lead"
+              ]
+            },
+            "telephone": [
+              44111222333444
+            ],
+            "email": [
+              "transparency@example.org"
+            ],
+            "website": [
+              "http://www.example.org"
+            ],
+            "mailing-address": [
+              {
+                "narrative": [
+                  "Transparency House, The Street, Town, City, Postcode"
+                ]
+              }
+            ]
+          }
+        ],
+        "activity-scope": {
+          "code": 3
+        },
+        "recipient-country": [
+          {
+            "code": "AF",
+            "percentage": 25
+          },
+          {
+            "code": "AG",
+            "percentage": 25
+          }
+        ],
+        "recipient-region": [
+          {
+            "code": 489,
+            "percentage": 25,
+            "vocabulary": 1
+          },
+          {
+            "code": "A1",
+            "percentage": 25,
+            "vocabulary": 99,
+            "vocabulary-uri": "http://example.com/vocab.html"
+          }
+        ],
+        "location": [
+          {
+            "ref": "AF-KAN",
+            "location-reach": {
+              "code": 1
+            },
+            "location-id": [
+              {
+                "code": 1453782,
+                "vocabulary": "G1"
+              }
+            ],
+            "name": {
+              "narrative": [
+                "Location name"
+              ]
+            },
+            "description": {
+              "narrative": [
+                "Location description"
+              ]
+            },
+            "activity-description": {
+              "narrative": [
+                "A description that qualifies the activity taking place at the location."
+              ]
+            },
+            "administrative": [
+              {
+                "code": 1453782,
+                "level": 1,
+                "vocabulary": "G1"
+              }
+            ],
+            "point": {
+              "srsName": "http://www.opengis.net/def/crs/EPSG/0/4326",
+              "pos": "31.616944 65.716944"
+            },
+            "exactness": {
+              "code": 1
+            },
+            "location-class": {
+              "code": 2
+            },
+            "feature-designation": {
+              "code": "ADMF"
+            }
+          },
+          {
+            "ref": "KH-PNH",
+            "location-reach": {
+              "code": 1
+            },
+            "location-id": [
+              {
+                "code": 1821306,
+                "vocabulary": "G1"
+              }
+            ],
+            "name": {
+              "narrative": [
+                "Location #2 name"
+              ]
+            },
+            "description": {
+              "narrative": [
+                "Location #2 description"
+              ]
+            },
+            "activity-description": {
+              "narrative": [
+                "A description that qualifies the activity taking place at location #2"
+              ]
+            },
+            "administrative": [
+              {
+                "code": 1453782,
+                "level": 1,
+                "vocabulary": "G1"
+              }
+            ],
+            "point": {
+              "srsName": "http://www.opengis.net/def/crs/EPSG/0/4326",
+              "pos": "11.5500 104.9167"
+            },
+            "exactness": {
+              "code": 1
+            },
+            "location-class": {
+              "code": 2
+            },
+            "feature-designation": {
+              "code": "ADMF"
+            }
+          }
+        ],
+        "sector": [
+          {
+            "code": 111,
+            "percentage": 50,
+            "vocabulary": 2
+          },
+          {
+            "code": 112,
+            "percentage": 50,
+            "vocabulary": 2
+          },
+          {
+            "code": "A1",
+            "percentage": 100,
+            "vocabulary": 99,
+            "vocabulary-uri": "http://example.com/vocab.html",
+            "narrative": [
+              "A description of the sector"
+            ]
+          }
+        ],
+        "country-budget-items": {
+          "vocabulary": 2,
+          "budget-item": [
+            {
+              "code": "1.1.1",
+              "percentage": 50,
+              "description": {
+                "narrative": [
+                  "Description text"
+                ]
+              }
+            },
+            {
+              "code": "1.2.1",
+              "percentage": 50,
+              "description": {
+                "narrative": [
+                  "Description text"
+                ]
+              }
+            }
+          ]
+        },
+        "humanitarian-scope": [
+          {
+            "code": "EQ-2015-000048-NPL",
+            "type": 1,
+            "vocabulary": "1-2",
+            "narrative": [
+              "Nepal Earthquake April 2015",
+              {
+                "xml:lang": "fr",
+                "#text": "Népal Earthquake Avril 2015"
+              }
+            ]
+          },
+          {
+            "code": "A1",
+            "type": 1,
+            "vocabulary": 99,
+            "vocabulary-uri": "http://example.com/vocab.html",
+            "narrative": [
+              {
+                "xml:lang": "en",
+                "#text": "Nepal Earthquake April 2015"
+              }
+            ]
+          }
+        ],
+        "policy-marker": [
+          {
+            "code": 2,
+            "significance": 3,
+            "vocabulary": 1
+          },
+          {
+            "code": 9,
+            "significance": 4,
+            "vocabulary": 1
+          },
+          {
+            "code": "A1",
+            "significance": 3,
+            "vocabulary": 99,
+            "vocabulary-uri": "http://example.com/vocab.html"
+          }
+        ],
+        "collaboration-type": {
+          "code": 1
+        },
+        "default-flow-type": {
+          "code": 10
+        },
+        "default-finance-type": {
+          "code": 110
+        },
+        "default-aid-type": [
+          {
+            "code": "A01"
+          }
+        ],
+        "default-tied-status": {
+          "code": 3
+        },
+        "budget": [
+          {
+            "status": 1,
+            "type": 1,
+            "period-start": {
+              "iso-date": "2014-01-01"
+            },
+            "period-end": {
+              "iso-date": "2014-12-31"
+            },
+            "value": {
+              "currency": "EUR",
+              "value-date": "2014-01-01",
+              "#text": 3000
+            }
+          }
+        ],
+        "planned-disbursement": [
+          {
+            "type": 1,
+            "period-start": {
+              "iso-date": "2014-01-01"
+            },
+            "period-end": {
+              "iso-date": "2014-12-31"
+            },
+            "value": {
+              "currency": "EUR",
+              "value-date": "2014-01-01",
+              "#text": 3000
+            },
+            "provider-org": {
+              "provider-activity-id": "BB-BBB-123456789-1234AA",
+              "ref": "BB-BBB-123456789",
+              "type": 10,
+              "narrative": [
+                "Agency B"
+              ]
+            },
+            "receiver-org": {
+              "receiver-activity-id": "AA-AAA-123456789-1234",
+              "ref": "AA-AAA-123456789",
+              "type": 23,
+              "narrative": [
+                "Agency A"
+              ]
+            }
+          },
+          {
+            "type": 1,
+            "period-start": {
+              "iso-date": "2014-01-01"
+            },
+            "period-end": {
+              "iso-date": "2014-12-31"
+            },
+            "value": {
+              "currency": "EUR",
+              "value-date": "2014-01-01",
+              "#text": 3000
+            }
+          }
+        ],
+        "capital-spend": {
+          "percentage": 88.8
+        },
+        "transaction": [
+          {
+            "humanitarian": 1,
+            "ref": 1234,
+            "transaction-type": {
+              "code": 1
+            },
+            "transaction-date": {
+              "iso-date": "2012-01-01"
+            },
+            "value": {
+              "currency": "EUR",
+              "value-date": "2012-01-01",
+              "#text": 1000
+            },
+            "description": {
+              "narrative": [
+                "Transaction description text"
+              ]
+            },
+            "provider-org": {
+              "provider-activity-id": "BB-BBB-123456789-1234AA",
+              "ref": "BB-BBB-123456789",
+              "type": 10,
+              "narrative": [
+                "Agency B"
+              ]
+            },
+            "receiver-org": {
+              "receiver-activity-id": "AA-AAA-123456789-1234",
+              "ref": "AA-AAA-123456789",
+              "type": 23,
+              "narrative": [
+                "Agency A"
+              ]
+            },
+            "disbursement-channel": {
+              "code": 1
+            },
+            "sector": [
+              {
+                "code": 111,
+                "vocabulary": 2
+              }
+            ],
+            "recipient-country": {
+              "code": "TM"
+            },
+            "recipient-region": {
+              "code": 616,
+              "vocabulary": 1
+            },
+            "flow-type": {
+              "code": 10
+            },
+            "finance-type": {
+              "code": 110
+            },
+            "aid-type": [
+              {
+                "code": "A01"
+              }
+            ],
+            "tied-status": {
+              "code": 3
+            }
+          }
+        ],
+        "document-link": [
+          {
+            "format": "application/vnd.oasis.opendocument.text",
+            "url": "http:www.example.org/docs/report_en.odt",
+            "title": {
+              "narrative": [
+                "Project Report 2013",
+                {
+                  "xml:lang": "fr",
+                  "#text": "Rapport de projet 2013"
+                }
+              ]
+            },
+            "category": [
+              {
+                "code": "A01"
+              }
+            ],
+            "language": [
+              {
+                "code": "en"
+              }
+            ],
+            "document-date": {
+              "iso-date": "2014-02-05"
+            }
+          }
+        ],
+        "related-activity": [
+          {
+            "ref": "AA-AAA-123456789-6789",
+            "type": 1
+          }
+        ],
+        "legacy-data": [
+          {
+            "iati-equivalent": "activity-status",
+            "name": "Project Status",
+            "value": 7
+          },
+          {
+            "iati-equivalent": "transaction",
+            "name": "cost",
+            "value": 1000
+          }
+        ],
+        "conditions": {
+          "attached": 1,
+          "condition": [
+            {
+              "type": 1,
+              "narrative": [
+                "Conditions text",
+                {
+                  "xml:lang": "fr",
+                  "#text": "Conditions texte"
+                }
+              ]
+            }
+          ]
+        },
+        "result": [
+          {
+            "aggregation-status": 1,
+            "type": 1,
+            "title": {
+              "narrative": [
+                "Result title"
+              ]
+            },
+            "description": {
+              "narrative": [
+                "Result description text"
+              ]
+            },
+            "indicator": [
+              {
+                "ascending": 1,
+                "measure": 1,
+                "title": {
+                  "narrative": [
+                    "Indicator title"
+                  ]
+                },
+                "description": {
+                  "narrative": [
+                    "Indicator description text"
+                  ]
+                },
+                "reference": [
+                  {
+                    "code": 3429,
+                    "vocabulary": 1
+                  },
+                  {
+                    "code": 861,
+                    "vocabulary": 7
+                  },
+                  {
+                    "code": "B1",
+                    "indicator-uri": "http://example.com/indicators.html",
+                    "vocabulary": 99
+                  }
+                ],
+                "baseline": [
+                  {
+                    "value": 10,
+                    "year": 2012,
+                    "comment": {
+                      "narrative": [
+                        "Baseline comment text"
+                      ]
+                    }
+                  }
+                ],
+                "period": [
+                  {
+                    "period-start": {
+                      "iso-date": "2013-01-01"
+                    },
+                    "period-end": {
+                      "iso-date": "2013-03-31"
+                    },
+                    "target": [
+                      {
+                        "value": 10,
+                        "location": [
+                          {
+                            "ref": "AF-KAN"
+                          },
+                          {
+                            "ref": "KH-PNH"
+                          }
+                        ],
+                        "dimension": [
+                          {
+                            "name": "sex",
+                            "value": "female"
+                          },
+                          {
+                            "name": "age",
+                            "value": "adult"
+                          }
+                        ],
+                        "comment": {
+                          "narrative": [
+                            "Target comment text"
+                          ]
+                        }
+                      }
+                    ],
+                    "actual": [
+                      {
+                        "value": 11,
+                        "location": [
+                          {
+                            "ref": "AF-KAN"
+                          },
+                          {
+                            "ref": "KH-PNH"
+                          }
+                        ],
+                        "dimension": [
+                          {
+                            "name": "sex",
+                            "value": "female"
+                          },
+                          {
+                            "name": "age",
+                            "value": "adult"
+                          }
+                        ],
+                        "comment": {
+                          "narrative": [
+                            "Actual comment text"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "crs-add": {
+          "other-flags": [
+            {
+              "code": 1,
+              "significance": 1
+            }
+          ],
+          "loan-terms": {
+            "rate-1": 4,
+            "rate-2": 3,
+            "repayment-type": {
+              "code": 1
+            },
+            "repayment-plan": {
+              "code": 4
+            },
+            "commitment-date": {
+              "iso-date": "2013-09-01"
+            },
+            "repayment-first-date": {
+              "iso-date": "2014-01-01"
+            },
+            "repayment-final-date": {
+              "iso-date": "2020-12-31"
+            }
+          },
+          "loan-status": {
+            "currency": "GBP",
+            "value-date": "2013-05-24",
+            "year": 2014,
+            "interest-received": 200000,
+            "principal-outstanding": 1500000,
+            "principal-arrears": 0,
+            "interest-arrears": 0
+          },
+          "channel-code": 21039
+        },
+        "fss": {
+          "extraction-date": "2014-05-06",
+          "phaseout-year": 2016,
+          "priority": 1,
+          "forecast": [
+            {
+              "currency": "GBP",
+              "value-date": "2013-07-03",
+              "year": 2014,
+              "#text": 10000
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
