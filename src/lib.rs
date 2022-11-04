@@ -120,7 +120,7 @@ const ARRAY_PATHS: &'static [&'static str] =
 
 
 #[pyfunction]
-fn convert(input: String, file: Option<String>, pretty: Option<bool>) -> eyre::Result<Option<String>> {
+pub fn convert(input: String, file: Option<String>, pretty: Option<bool>) -> eyre::Result<Option<String>> {
 
     let xml = if Path::new(&input).exists() {
         let mut xml_file = File::open(input).unwrap();
