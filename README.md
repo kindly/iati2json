@@ -22,7 +22,7 @@ iati2json.convert("my_iati_file.xml", file="converted.json")
 import iati2json
 import json
 iati_json_string = iati2json.convert("my_iati_file.xml")
-iati_dict = json.loads(my_json_string)
+iati_dict = json.loads(iati_json_string)
 ```
 
 ### Pretty (indented output)

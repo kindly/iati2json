@@ -141,7 +141,8 @@ pub fn convert(input: String, file: Option<String>, pretty: Option<bool>) -> eyr
     let json = xml_string_to_json(xml, &config)?;
 
     if let Some(output_file) = file {
-        let writer = std::fs::File::create(output_file)?;
+        let writer = std::io::BufWriter::new(std::fs::File::create(output_file)?);
+
         if pretty.is_some() && pretty.unwrap() {
             serde_json::to_writer_pretty(writer, &json)?;
         } else {
