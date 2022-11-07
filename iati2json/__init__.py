@@ -43,5 +43,4 @@ def convert(input, file=None, pretty=False, schemas=None, arrays=None):
 
     if not arrays:
         arrays = get_arrays_from_schemas(schemas)
-    convert_rs(input, file, pretty, arrays)
-
+    return convert_rs(input, file, pretty, arrays)
