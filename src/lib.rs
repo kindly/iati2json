@@ -2,7 +2,13 @@ use std::fs::File;
 use std::io::prelude::*;
 use quickxml_to_serde::{xml_string_to_json, Config, JsonType, JsonArray};
 use pyo3::prelude::*;
+
 use std::path::Path;
+use chardet::{detect, charset2encoding};
+use std::fs::OpenOptions;
+use encoding::DecoderTrap;
+use encoding::label::encoding_from_whatwg_label;
+
 
 const ARRAY_PATHS: &'static [&'static str] = 
    &["/iati-activities/iati-activity",
@@ -120,21 +126,53 @@ const ARRAY_PATHS: &'static [&'static str] =
 
 
 #[pyfunction]
-pub fn convert(input: String, file: Option<String>, pretty: Option<bool>) -> eyre::Result<Option<String>> {
+pub fn convert(input: String, file: Option<String>, pretty: Option<bool>, arrays: Option<Vec<String>>) -> eyre::Result<Option<String>> {
+
 
     let xml = if Path::new(&input).exists() {
-        let mut xml_file = File::open(input).unwrap();
-        let mut xml_contents = String::new();
-        xml_file.read_to_string(&mut xml_contents).unwrap();
-        xml_contents
+
+        let mut fh = OpenOptions::new().read(true).open(&input).expect(
+            "Could not open file",
+        );
+        let mut reader: Vec<u8> = Vec::new();
+
+        // read file
+        fh.read_to_end(&mut reader).expect("Could not read file");
+
+        // detect charset of the file
+        let result = detect(&reader);
+        // result.0 Encode
+        // result.1 Confidence
+        // result.2 Language
+
+        // decode file into utf-8
+        let coder = encoding_from_whatwg_label(charset2encoding(&result.0));
+        if coder.is_some() {
+            let xml_contents = coder.unwrap().decode(&reader, DecoderTrap::Ignore);
+            match xml_contents {
+                Ok(res) => res,
+                Err(res) => return Err(eyre::eyre!(res)),
+            }
+        } else {
+            let mut xml_file = File::open(input)?;
+            let mut xml_contents = String::new();
+            xml_file.read_to_string(&mut xml_contents)?;
+            xml_contents
+        }
     } else {
         input
     };
 
     let mut config = Config::new_with_defaults();
 
-    for path in ARRAY_PATHS {
-        config.json_type_overrides.insert(path.to_string(), JsonArray::Always(JsonType::Infer));
+    if let Some(arrays) = arrays {
+        for path in arrays {
+            config.json_type_overrides.insert(path.to_string(), JsonArray::Always(JsonType::Infer));
+        }
+    } else {
+        for path in ARRAY_PATHS {
+            config.json_type_overrides.insert(path.to_string(), JsonArray::Always(JsonType::Infer));
+        }
     }
     config.xml_attr_prefix = "".into();
 

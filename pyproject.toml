@@ -4,6 +4,7 @@ description = "Iati to JSON converter"
 readme="README.md"
 repository="https://github.com/kindly/iati2json"
 license = {text= "MIT"}
+dependencies = ["xmlschema"]
 
 [build-system]
 requires = ["maturin>=0.13,<0.14"]

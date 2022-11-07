@@ -11,8 +11,9 @@ name = "iati2json"
 strip = true 
 
 [dependencies]
+chardet = "0.2.4"
+encoding = "0.2.33"
 eyre = { version = "0.6.8" }
 pyo3 = { version = "0.17.3", features = ["extension-module", "eyre"] }
-quick-xml = { version = "0.26.0", features = ["encoding"] }
 quickxml_to_serde = { version = "0.5.0", features = ["json_types"] }
 serde_json = { version = "1.0.87", features = ["preserve_order"] }
