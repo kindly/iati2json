@@ -128,7 +128,6 @@ const ARRAY_PATHS: &'static [&'static str] =
 #[pyfunction]
 pub fn convert(input: String, file: Option<String>, pretty: Option<bool>, arrays: Option<Vec<String>>) -> eyre::Result<Option<String>> {
 
-
     let xml = if Path::new(&input).exists() {
 
         let mut fh = OpenOptions::new().read(true).open(&input).expect(
@@ -136,16 +135,8 @@ pub fn convert(input: String, file: Option<String>, pretty: Option<bool>, arrays
         );
         let mut reader: Vec<u8> = Vec::new();
 
-        // read file
         fh.read_to_end(&mut reader).expect("Could not read file");
-
-        // detect charset of the file
         let result = detect(&reader);
-        // result.0 Encode
-        // result.1 Confidence
-        // result.2 Language
-
-        // decode file into utf-8
         let coder = encoding_from_whatwg_label(charset2encoding(&result.0));
         if coder.is_some() {
             let xml_contents = coder.unwrap().decode(&reader, DecoderTrap::Ignore);

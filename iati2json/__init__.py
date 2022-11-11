@@ -7,6 +7,7 @@ current_schemas = [
     "https://raw.githubusercontent.com/IATI/IATI-Schemas/version-2.03/iati-organisations-schema.xsd",
 ]
 
+
 @lru_cache
 def get_arrays_from_schemas(schemas=None):
     list_paths = []
@@ -21,7 +22,6 @@ def get_arrays_from_schemas(schemas=None):
         for child in schema.iterchildren():
             if child.name:
                 iterate(child, current_path + '/' + child.name)
-    
 
     for schema_url in schemas:
         schema = xmlschema.XMLSchema(
@@ -36,11 +36,11 @@ def get_arrays_from_schemas(schemas=None):
 
         if organisation:
             iterate(organisation[0], '/iati-organisations')
-    
     return list_paths
+
 
 def convert(input, file=None, pretty=False, schemas=None, arrays=None):
 
-    if not arrays:
-        arrays = get_arrays_from_schemas(schemas)
+    if not arrays and schemas:
+        arrays = get_arrays_from_schemas(tuple(schemas))
     return convert_rs(input, file, pretty, arrays)
