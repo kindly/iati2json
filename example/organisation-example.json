@@ -1,0 +1,255 @@
+{
+  "iati-organisations": {
+    "generated-datetime": "2014-09-02T16:15:37",
+    "version": 1.05,
+    "iati-organisation": [
+      {
+        "default-currency": "EUR",
+        "last-updated-datetime": "2014-09-02T16:15:37",
+        "version": 1.05,
+        "xml:lang": "en",
+        "reporting-org": {
+          "ref": "AA-AAA-123456789",
+          "secondary-reporter": 0,
+          "type": 40,
+          "#text": "Organisation name"
+        },
+        "iati-identifier": "AA-AAA-123456789",
+        "name": [
+          "Organisation name",
+          {
+            "xml:lang": "fr",
+            "#text": "Nom de l'organisme"
+          }
+        ],
+        "total-budget": [
+          {
+            "period-start": {
+              "iso-date": "2014-01-01"
+            },
+            "period-end": {
+              "iso-date": "2014-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2014-01-01",
+              "#text": 250000000
+            }
+          },
+          {
+            "period-start": {
+              "iso-date": "2015-01-01"
+            },
+            "period-end": {
+              "iso-date": "2015-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2014-01-01",
+              "#text": 300000000
+            }
+          },
+          {
+            "period-start": {
+              "iso-date": "2016-01-01"
+            },
+            "period-end": {
+              "iso-date": "2016-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2014-01-01",
+              "#text": 350000000
+            }
+          }
+        ],
+        "recipient-org-budget": [
+          {
+            "recipient-org": {
+              "ref": 123,
+              "#text": "Example Recipient Organisation"
+            },
+            "period-start": {
+              "iso-date": "2014-01-01"
+            },
+            "period-end": {
+              "iso-date": "2014-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2014-01-01",
+              "#text": 2500000
+            }
+          },
+          {
+            "recipient-org": {
+              "ref": 123,
+              "#text": "Example Recipient Organisation"
+            },
+            "period-start": {
+              "iso-date": "2015-01-01"
+            },
+            "period-end": {
+              "iso-date": "2015-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2015-01-01",
+              "#text": 3000000
+            }
+          },
+          {
+            "recipient-org": {
+              "ref": 123,
+              "#text": "Example Recipient Organisation"
+            },
+            "period-start": {
+              "iso-date": "2016-01-01"
+            },
+            "period-end": {
+              "iso-date": "2016-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2014-01-01",
+              "#text": 3500000
+            }
+          }
+        ],
+        "recipient-country-budget": [
+          {
+            "recipient-country": {
+              "code": "AA",
+              "#text": "Country Name"
+            },
+            "period-start": {
+              "iso-date": "2014-01-01"
+            },
+            "period-end": {
+              "iso-date": "2014-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2014-01-01",
+              "#text": 25000000
+            }
+          },
+          {
+            "recipient-country": {
+              "code": "AA",
+              "#text": "Country Name"
+            },
+            "period-start": {
+              "iso-date": "2015-01-01"
+            },
+            "period-end": {
+              "iso-date": "2015-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2014-01-01",
+              "#text": 30000000
+            }
+          },
+          {
+            "recipient-country": {
+              "code": "AA",
+              "#text": "Country Name"
+            },
+            "period-start": {
+              "iso-date": "2016-01-01"
+            },
+            "period-end": {
+              "iso-date": "2016-12-31"
+            },
+            "value": {
+              "currency": "USD",
+              "value-date": "2014-01-01",
+              "#text": 35000000
+            }
+          }
+        ],
+        "document-link": [
+          {
+            "format": "application/vnd.oasis.opendocument.text",
+            "url": "http:www.example.org/docs/report_en.odt",
+            "category": [
+              {
+                "code": "B01"
+              }
+            ],
+            "language": [
+              {
+                "code": "en"
+              }
+            ],
+            "title": "Annual Report 2013"
+          },
+          {
+            "format": "application/vnd.oasis.opendocument.text",
+            "url": "http:www.example.org/docs/report_fr.odt",
+            "category": [
+              {
+                "code": "B01"
+              }
+            ],
+            "language": [
+              {
+                "code": "fr"
+              }
+            ],
+            "title": [
+              "Annual Report 2013",
+              {
+                "xml:lang": "fr",
+                "#text": "Rapport annuel 2013"
+              }
+            ]
+          },
+          {
+            "format": "application/vnd.oasis.opendocument.text",
+            "url": "http:www.example.org/docs/report_en.odt",
+            "category": [
+              {
+                "code": "B01"
+              }
+            ],
+            "language": [
+              {
+                "code": "en"
+              }
+            ],
+            "title": [
+              "Annual Report 2013",
+              {
+                "xml:lang": "fr",
+                "#text": "Rapport annuel 2013"
+              }
+            ]
+          },
+          {
+            "format": "application/vnd.oasis.opendocument.text",
+            "url": "http:www.example.org/docs/report_en.odt",
+            "category": [
+              {
+                "code": "B01"
+              },
+              {
+                "code": "B02"
+              },
+              {
+                "code": "B03"
+              }
+            ],
+            "language": [
+              {
+                "code": "en"
+              }
+            ],
+            "title": "Annual Report 2013"
+          }
+        ]
+      }
+    ]
+  }
+}
